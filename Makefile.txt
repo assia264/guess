@@ -1,0 +1,12 @@
+# Makefile to generate the README.md
+
+all: README.md
+
+README.md:
+	@echo "# Guessing Game" > README.md
+	@echo "Date and Time: $(shell date)" >> README.md
+	@echo "Number of lines of code in guessinggame.sh: $(shell wc -l < guessinggame.sh)" >> README.md
+	@echo "### Project Description" >> README.md
+	@echo "This project is a guessing game where the user has to guess the number of files in the current directory." >> README.md
+	@echo "### Game Script" >> README.md
+	@cat guessinggame.sh >> README.md
